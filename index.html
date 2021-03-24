@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+
+  <style>
+    input[type=text],
+    select {
+      width: 50%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      width: 50%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      resize: none;
+    }
+
+    textarea:focus {
+      box-shadow: 0 0 3pt 2pt #719ECE;
+    }
+
+    input[type=text]:focus {
+      box-shadow: 0 0 3pt 2pt #719ECE;
+    }
+
+    input[type=email] {
+      width: 50%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type=email]:focus {
+      box-shadow: 0 0 3pt 2pt #719ECE;
+    }
+
+    input[type=date] {
+      width: 50%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type=password] {
+      width: 50%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type=password]:focus {
+      box-shadow: 0 0 3pt 2pt #719ECE;
+    }
+
+    input[type=tel] {
+      width: 50%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+    }
+
+    input[type=date]:focus {
+      box-shadow: 0 0 3pt 2pt #719ECE;
+    }
+
+    input[type=tel]:focus {
+      box-shadow: 0 0 3pt 2pt #719ECE;
+    }
+
+    input[type=submit] {
+      width: 10%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: teal;
+    }
+
+    div {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      margin-left: 350px;
+      width: 50%;
+    }
+
+    select:focus {
+      box-shadow: 0 0 3pt 2pt #719ECE;
+    }
+
+    .required:after {
+      content: " *";
+      color: red;
+    }
+
+    #dvtext {
+      display: none;
+    }
+
+    #chkYes:checked~#dvtext {
+      display: block;
+      position: relative;
+      margin: 0px 0px 0px 2px;
+    }
+
+    #dvtext2 {
+      display: none;
+    }
+
+    #chkYes2:checked~#dvtext2 {
+      display: block;
+      position: relative;
+      margin: 0px 0px 0px 2px;
+    }
+
+    #dvtext3 {
+      display: none;
+    }
+
+    #chkYes3:checked~#dvtext3 {
+      display: block;
+      position: relative;
+      margin: 0px 0px 0px 2px;
+    }
+
+    #dvtext4 {
+      display: none;
+    }
+
+    #chkYes4:checked~#dvtext4 {
+      display: block;
+      position: relative;
+      margin: 0px 0px 0px 2px;
+    }
+
+    #dvtext5 {
+      display: none;
+    }
+
+    #chkYes5:checked~#dvtext5 {
+      display: block;
+      position: relative;
+      margin: 0px 0px 0px 2px;
+    }
+
+    #dvtext6 {
+      display: none;
+    }
+
+    #chkYes6:checked~#dvtext6 {
+      display: block;
+      position: relative;
+      margin: 0px 0px 0px 2px;
+    }
+
+    #dvtext7 {
+      display: none;
+    }
+
+    #chkYes7:checked~#dvtext7 {
+      display: block;
+      position: relative;
+      margin: 0px 0px 0px 2px;
+    }
+
+    #dvtext8 {
+      display: none;
+    }
+
+    #chkYes8:checked~#dvtext8 {
+      display: block;
+      position: relative;
+      margin: 0px 0px 0px 2px;
+    }
+
+    #dvtext9 {
+      display: none;
+    }
+
+    #chkYes9:checked~#dvtext9 {
+      display: block;
+      position: relative;
+      margin: 0px 0px 0px 2px;
+    }
+
+    #dvtext10 {
+      display: none;
+    }
+
+    #chkYes10:checked~#dvtext10 {
+      display: block;
+      position: relative;
+      margin: 0px 0px 0px 2px;
+    }
+
+    #dvtext11 {
+      display: none;
+    }
+
+    #chkYes11:checked~#dvtext11 {
+      display: block;
+      position: relative;
+      margin: 0px 0px 0px 2px;
+    }
+
+    #dvtext12 {
+      display: none;
+    }
+
+    #chkYes12:checked~#dvtext12 {
+      display: block;
+      position: relative;
+      margin: 0px 0px 0px 2px;
+    }
+
+    #dvtext13 {
+      display: none;
+    }
+
+    #chkYes13:checked~#dvtext13 {
+      display: block;
+      position: relative;
+      margin: 0px 0px 0px 2px;
+    }
+
+    #dvtext14 {
+      display: none;
+    }
+
+    #chkYes14:checked~#dvtext14 {
+      display: block;
+      position: relative;
+      margin: 0px 0px 0px 2px;
+    }
+
+    #dvtext15 {
+      display: none;
+    }
+
+    #chkYes15:checked~#dvtext15 {
+      display: block;
+      position: relative;
+      margin: 0px 0px 0px 2px;
+    }
+
+    #dvtext16 {
+      display: none;
+    }
+
+    #chkYes16:checked~#dvtext16 {
+      display: block;
+      position: relative;
+      margin: 0px 0px 0px 2px;
+    }
+
+    /* input {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: blue
+}
+input:focus {
+  border-color: green
+} */
+  </style>
+</head>
+
+<body>
+  <h1 style="text-align: center ;color: teal;text-indent: 0pt; font-family:'Playball', cursive;">Registration Form</h1>
+  <div>
+    <form onsubmit="return verifyPassword()" class="form-inline" method="POST" action="/" enctype="multipart/form-data">
+      <fieldset>
+        <legend>Demographic Details</legend>
+        <label for="fname" class="required">Name of child:</label><br>
+        <input type="text" id="cname" name="cname" placeholder="Enter  name" pattern="[a-zA-Z0-9]+[a-zA-Z0-9 ]+"
+          required /><br>
+        <label for="fname" class="required">Father's Name:</label><br>
+        <input type="text" id="fname" name="fname" placeholder="Enter your father's name"
+          pattern="[a-zA-Z0-9]+[a-zA-Z0-9 ]+" required /><br>
+        <label for="mname" class="required">Mother's Name:</label><br>
+        <input type="text" id="mname" name="mname" placeholder="Enter your mother's name"
+          pattern="[a-zA-Z0-9]+[a-zA-Z0-9 ]+" required /><br>
+        <label for="address" class="required">Address:</label><br>
+        <textarea class="add" name="address" rows="8" cols="50" required></textarea><br>
+        <label for="gender">Gender:</label><br>
+        <input type="radio" id="Male" name="gender" value="Male" />
+        <label for="male">Male</label><br>
+        <input type="radio" id="Female" name="gender" value="Female" />
+        <label for="female">Female</label><br>
+        <input type="radio" id="Other" name="gender" value="Other" />
+        <label for="other">Ambiguous</label><br><br>
+        <label for="dob" class="required">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob" required><br>
+        <label for="phone" class="required">Enter your phone number:</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="xxxxxxxxxx" pattern="[7-9]{1}[0-9]{9}" required><br>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>Presenting Symptoms</legend>
+        <label for="fever" class="required">Fever:</label><br>
+        <input type="radio" id="chkYes" name="chk" />
+        <label for="chkYes">Yes</label>
+        <input type="radio" id="chkNo" name="chk" />
+        <label for="chkNo">No</label>
+        <input type="radio" id="chkNo" name="chk" />
+        <label for="chkNotknown">Not Known</label>
+        <div id="dvtext">
+          From how may days:
+          <input type="text" id="txtBox" />
+        </div><br>
+        <label for="dib" class="required">Difficulty in Breathing:</label><br>
+        <input type="radio" id="chkYes2" name="chk" />
+        <label for="chkYes2">Yes</label>
+        <input type="radio" id="chkNo2" name="chk" />
+        <label for="chkNo2">No</label>
+        <input type="radio" id="chkNo2" name="chk" />
+        <label for="chkNotknown2">Not Known</label>
+        <div id="dvtext2">
+          From how may days:
+          <input type="text" id="txtBox" />
+        </div><br>
+        <label for="fb" class="required">Fast in Breathing:</label><br>
+        <input type="radio" id="chkYes3" name="chk" />
+        <label for="chkYes3">Yes</label>
+        <input type="radio" id="chkNo3" name="chk" />
+        <label for="chkNo3">No</label>
+        <input type="radio" id="chkNo3" name="chk" />
+        <label for="chkNotknown3">Not Known</label>
+        <div id="dvtext3">
+          From how may days:
+          <input type="text" id="txtBox" />
+        </div><br>
+        <label for="cough" class="required">Cough:</label><br>
+        <input type="radio" id="chkYes4" name="chk" />
+        <label for="chkYes4">Yes</label>
+        <input type="radio" id="chkNo4" name="chk" />
+        <label for="chkNo4">No</label>
+        <input type="radio" id="chkNo4" name="chk" />
+        <label for="chkNotknown4">Not Known</label>
+        <div id="dvtext4">
+          From how may days:
+          <input type="text" id="txtBox" />
+        </div><br>
+        <label for="cin" class="required">Chest Indrawing:</label><br>
+        <input type="radio" id="chkYes5" name="chk" />
+        <label for="chkYes5">Yes</label>
+        <input type="radio" id="chkNo5" name="chk" />
+        <label for="chkNo5">No</label>
+        <input type="radio" id="chkNo5" name="chk" />
+        <label for="chkNotknown5">Not Known</label>
+        <div id="dvtext5">
+          From how may days:
+          <input type="text" id="txtBox" />
+        </div><br>
+        <label for="abm" class="required">Abnormal Movements:</label><br>
+        <input type="radio" id="chkYes6" name="chk" />
+        <label for="chkYes6">Yes</label>
+        <input type="radio" id="chkNo6" name="chk" />
+        <label for="chkNo6">No</label>
+        <input type="radio" id="chkNo6" name="chk" />
+        <label for="chkNotknown6">Not Known</label>
+        <div id="dvtext6">
+          From how may days:
+          <input type="text" id="txtBox" />
+        </div><br>
+        <label for="rtf">Refuse to Feed:</label><br>
+        <input type="radio" id="chkYes7" name="chk" />
+        <label for="chkYes7">Yes</label>
+        <input type="radio" id="chkNo7" name="chk" />
+        <label for="chkNo7">No</label>
+        <input type="radio" id="chkNo7" name="chk" />
+        <label for="chkNotknown7">Not Known</label>
+        <div id="dvtext7">
+          From how may days:
+          <input type="text" id="txtBox" />
+        </div><br>
+        <label for="bdf" class="required">Breathlessness during Feed:</label><br>
+        <input type="radio" id="chkYes8" name="chk" />
+        <label for="chkYes8">Yes</label>
+        <input type="radio" id="chkNo8" name="chk" />
+        <label for="chkNo8">No</label>
+        <input type="radio" id="chkNo8" name="chk" />
+        <label for="chkNotknown8">Not Known</label>
+        <div id="dvtext8">
+          From how may days:
+          <input type="text" id="txtBox" />
+        </div><br>
+        <label for="bd" class="required">Bluish Discoloration:</label><br>
+        <input type="radio" id="chkYes9" name="chk" />
+        <label for="chkYes9">Yes</label>
+        <input type="radio" id="chkNo9" name="chk" />
+        <label for="chkNo9">No</label>
+        <input type="radio" id="chkNo9" name="chk" />
+        <label for="chkNotknown9">Not Known</label>
+        <div id="dvtext9">
+          From how may days:
+          <input type="text" id="txtBox" />
+        </div><br>
+        <label for="ws" class="required">Whistling sounds while Breathing:</label><br>
+        <input type="radio" id="chkYes10" name="chk" />
+        <label for="chkYes10">Yes</label>
+        <input type="radio" id="chkNo10" name="chk" />
+        <label for="chkNo10">No</label>
+        <input type="radio" id="chkNo10" name="chk" />
+        <label for="chkNotknown10">Not Known</label>
+        <div id="dvtext10">
+          From how may days:
+          <input type="text" id="txtBox" />
+        </div><br>
+        <label for="sleepy">Sleepy:</label><br>
+        <input type="radio" id="chkYes11" name="chk" />
+        <label for="chkYes11">Yes</label>
+        <input type="radio" id="chkNo11" name="chk" />
+        <label for="chkNo11">No</label>
+        <input type="radio" id="chkNo11" name="chk" />
+        <label for="chkNotknown11">Not Known</label>
+        <div id="dvtext11">
+          From how may days:
+          <input type="text" id="txtBox" />
+        </div><br>
+        <label for="vomit">Vomiting:</label><br>
+        <input type="radio" id="chkYes12" name="chk" />
+        <label for="chkYes12">Yes</label>
+        <input type="radio" id="chkNo12" name="chk" />
+        <label for="chkNo12">No</label>
+        <input type="radio" id="chkNo12" name="chk" />
+        <label for="chkNotknown12">Not Known</label>
+        <div id="dvtext12">
+          From how may days:
+          <input type="text" id="txtBox" />
+        </div><br>
+        <label for="lm">Loose Motions:</label><br>
+        <input type="radio" id="chkYes13" name="chk" />
+        <label for="chkYes13">Yes</label>
+        <input type="radio" id="chkNo13" name="chk" />
+        <label for="chkNo13">No</label>
+        <input type="radio" id="chkNo13" name="chk" />
+        <label for="chkNotknown13">Not Known</label>
+        <div id="dvtext13">
+          From how may days:
+          <input type="text" id="txtBox" />
+        </div><br>
+        <label for="dist">Abdominal Distension:</label><br>
+        <input type="radio" id="chkYes14" name="chk" />
+        <label for="chkYes14">Yes</label>
+        <input type="radio" id="chkNo14" name="chk" />
+        <label for="chkNo14">No</label>
+        <input type="radio" id="chkNo14" name="chk" />
+        <label for="chkNotknown14">Not Known</label>
+        <div id="dvtext14">
+          From how may days:
+          <input type="text" id="txtBox" />
+        </div><br>
+        <label for="bleed">Bleeding from any site:</label><br>
+        <input type="radio" id="chkYes15" name="chk" />
+        <label for="chkYes15">Yes</label>
+        <input type="radio" id="chkNo15" name="chk" />
+        <label for="chkNo15">No</label>
+        <input type="radio" id="chkNo15" name="chk" />
+        <label for="chkNotknown15">Not Known</label>
+        <div id="dvtext15">
+          From how may days:
+          <input type="text" id="txtBox" />
+        </div><br>
+        <label for="yd" class="required">Yellowish Discoloration:</label><br>
+        <input type="radio" id="chkYes16" name="chk" />
+        <label for="chkYes16">Yes</label>
+        <input type="radio" id="chkNo16" name="chk" />
+        <label for="chkNo16">No</label>
+        <input type="radio" id="chkNo16" name="chk" />
+        <label for="chkNotknown16">Not Known</label>
+        <div id="dvtext16">
+          From how may days:
+          <input type="text" id="txtBox" />
+        </div><br>
+        <label for="othersymptopms" class="required">Other Symptopms:</label><br>
+        <textarea class="othersymptopms" name="othersymptopms" rows="8" cols="50" required></textarea><br>
+      </fieldset><br>
+      <fieldset>
+        <legend>If young infant(<=60 days of age):</legend>
+            <label for="dbcsection">Delivery by C-Section:</label><br>
+            <label class="checkbox-inline">
+              <input type="checkbox" value="no">No
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" value="notknown">Not known
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" value="yes">Yes
+            </label>
+            <br>
+            <label for="requiredppv">Required PPV at birth:</label><br>
+            <label class="checkbox-inline">
+              <input type="checkbox" value="no">No
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" value="notknown">Not known
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" value="yes">Yes
+            </label><br>
+            <label for="nicu">Required admission in NICU/SNCU:</label><br>
+            <label class="checkbox-inline">
+              <input type="checkbox" value="no">No
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" value="notknown">Not known
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" value="yes">Yes
+            </label>
+            <br>
+            <label for="weight">Birth Weight:</label><br>
+            <input placeholder="Weight in grams" type="text" />
+      </fieldset><br>
+      <fieldset>
+        <legend>Feeding History</legend><br>
+        <label for="feedtill">Exclusive Breastfeed till now:</label><br>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="no">No
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="notknown">Not known
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="yes">Yes
+        </label>
+        <br>
+        <label for="weaning">Weaning:</label><br>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="no">No
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="notknown">Not known
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="yes">Yes
+        </label>
+        <br>
+      </fieldset><br>
+      <fieldset>
+        <legend>Immunization History</legend><br>
+        <label for="isimmune">Is immunization till now:</label><br>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="no">No
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="notknown">Not known
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="yes">Yes
+        </label>
+        <br>
+      </fieldset><br>
+      <fieldset>
+        <legend>Past Illness</legend><br>
+        <label for="similar">Similar episodes in past:</label><br>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="no">No
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="notknown">Not known
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="yes">Yes
+        </label>
+        <br>
+        <label for="hospital">Needed Hospitalisation in Past:</label><br>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="no">No
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="notknown">Not known
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="yes">Yes
+        </label>
+        <br>
+        <label for="nibulization">Needed Nibulization in past 12 months:</label><br>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="no">No
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="notknown">Not known
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="yes">Yes
+        </label>
+        <br>
+        <label for="inhaler">Inhaler intake in past 12 months:</label><br>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="no">No
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="notknown">Not known
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="yes">Yes
+        </label>
+        <br>
+      </fieldset><br>
+      <fieldset>
+        <legend>Status at admission/presentation</legend>
+        <label for="temp" class="required">Temperature(&#8451):</label><br>
+        <input type="text" id="temp" name="temp" required /><br>
+        <label for="heart" class="required">Heart Rate(bpm):</label><br>
+        <input type="text" id="heart" name="heart" required /><br>
+        <label for="resp" class="required">Respiratory Rate:</label><br>
+        <input type="text" id="resp" name="resp" required /><br>
+        <label for="sp" class="required">SpO<sub>2</sub>(%):</label><br>
+        <input type="text" id="sp" name="sp" required /><br>
+        <label for="fio2">Highest FiO<sub>2</sub> within 6 hr of admission if available(%):</label><br>
+        <input type="text" id="fio2" name="fio2"/><br>
+        <label for="po2">Lowest pO<sub>2</sub> within 6 hr of admission if available(mm Hg):</label><br>
+        <input type="text" id="po2" name="po2"/><br>
+        <label for="pco2">Highest pCO<sub>2</sub> within 6 hr of admission if available(mm Hg):</label><br>
+        <input type="text" id="pco2" name="pco2"/><br>
+        <label for="base">Worst base deficit in ABG wihtin 6 hr of admission if available:</label><br>
+        <input type="text" id="base" name="base"/><br>
+      </fieldset><br>
+      <fieldset>
+        <legend>Respiratory Findings</legend>
+        <label for="intercostal" class="required">Intercostal retractions:</label><br>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="no">No
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="mild">Mild
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="marked">Marked
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="intubated">Intubated
+        </label>
+        <br>
+        <label for="suprasternal" class="required">Suprasternal retractions:</label><br>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="no">No
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="mild">Mild
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="marked">Marked
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="intubated">Intubated
+        </label>
+        <br>
+        <label for="nasal" class="required">Nasal alae flaring:</label><br>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="no">No
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="mild">Mild
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="marked">Marked
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="intubated">Intubated
+        </label>
+        <br>
+      </fieldset>
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+  <script>
+    function validation() {
+      var x = document.getElementById("adhr").value;
+      var twelvedigit = /^\d{12}$/;
+      var sixteendigit = /^\d{16}$/;
+      if (x.match(twelvedigit)) {
+        return true;
+
+      }
+      if (x.match(sixteendigit)) {
+        return true;
+
+      }
+      else {
+        alert("Invalid Aadhar no.");
+        return false;
+      }
+    }
+    var check = function () {
+      if (document.getElementById('pswrd').value ==
+        document.getElementById('cpswrd').value) {
+        document.getElementById('message').style.color = 'green';
+        document.getElementById('message').innerHTML = 'password matched';
+      } else {
+        document.getElementById('message').style.color = 'red';
+        document.getElementById('message').innerHTML = 'password not matching';
+      }
+    }
+    function verifyPassword() {
+      var pw = document.getElementById("pswrd").value;
+      //check empty password field  
+      if (pw == "") {
+        document.getElementById("message").innerHTML = "**Fill the password please!";
+        return false;
+      }
+
+      //minimum password length validation  
+      if (pw.length < 8) {
+        document.getElementById("message").innerHTML = "**Password length must be atleast 8 characters";
+        return false;
+      }
+
+      //maximum length of password validation  
+      if (pw.length > 15) {
+        document.getElementById("message").innerHTML = "**Password length must not exceed 15 characters";
+        return false;
+      }
+    }  
+  </script>
+</body>
+
+</html>
